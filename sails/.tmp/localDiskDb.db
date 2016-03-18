@@ -1,0 +1,94 @@
+{
+  "data": {
+    "user": [
+      {
+        "email": "toto@toto.fr",
+        "password": "toto",
+        "login": "toto",
+        "img": "Images/cat.jpg",
+        "createdAt": "2015-11-04T20:34:51.894Z",
+        "updatedAt": "2015-11-04T20:34:51.894Z",
+        "id": 1
+      }
+    ],
+    "users": [
+      {
+        "email": "toto@toto.fr",
+        "password": "toto",
+        "login": "toto",
+        "img": "Images/cat.jpg",
+        "createdAt": "2015-11-05T00:30:44.311Z",
+        "updatedAt": "2015-11-05T00:30:44.311Z",
+        "id": 1
+      },
+      {
+        "email": "titi@titi.fr",
+        "password": "titi",
+        "login": "titi",
+        "img": "Images/cat.jpg",
+        "createdAt": "2015-11-05T01:28:46.144Z",
+        "updatedAt": "2015-11-05T01:28:46.144Z",
+        "id": 2
+      },
+      {
+        "email": "test@test.fr",
+        "password": "test",
+        "login": "test",
+        "img": "Images/cat.jpg",
+        "createdAt": "2015-11-05T08:28:46.097Z",
+        "updatedAt": "2015-11-05T08:28:46.097Z",
+        "id": 4
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "users": {
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "login": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string",
+        "unique": true
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 1
+    },
+    "users": {
+      "id": 4
+    }
+  }
+}

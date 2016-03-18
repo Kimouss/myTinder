@@ -1,0 +1,25 @@
+<ion-view view-title="Stand By">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="stand in wait">
+	     <ion ng-repeat="card in cards">
+	     	<ion ng-show="{{stand.user_id}} == {{card.id}}">
+		     	<a class="linkProfil" href="#/app/cards/{{card.id}}">{{card.name}} {{card.lastname}}</a>
+		     	<button class="btn-del button button-small button-assertive" ng-click="cardRemoveWait({{stand.id}})">
+			      <i class="fa fa-trash"></i>
+			    </button>
+			    <button class="wait-dislike button button-small button-assertive" ng-click="waitDislike({{card.id}}, {{stand.id}})">
+             		<i class="fa fa-ban"></i>
+           		</button>
+				<button class="wait-like button button-small button-balanced" ng-click="waitLike({{card.id}}, {{stand.id}})">
+              		<i class="fa fa-heart"></i>
+            	</button>
+	     	</ion>
+	     </ion>
+      </ion-item>
+      <button class="button button-full button-positive" ng-click="refreshWait()">
+		<i class="fa fa-refresh"></i>
+	</button>
+    </ion-list>
+  </ion-content>
+</ion-view>

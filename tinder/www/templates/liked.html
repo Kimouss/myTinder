@@ -1,0 +1,19 @@
+<ion-view view-title="Liked">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="like in liked">
+        <ion ng-repeat="card in cards">
+          <ion ng-show="{{like.user_id}} == {{card.id}}">
+            <a class="linkProfil" href="#/app/cards/{{card.id}}">{{card.name}} {{card.lastname}}</a>
+            <button class="btn-del button button-small button-assertive" ng-click="cardRemoveLike({{like.id}})">
+              <i class="fa fa-trash"></i>
+            </button>
+          </ion>
+        </ion>
+      </ion-item>
+      <button class="button button-full button-positive" ng-click="refreshLike()">
+        <i class="fa fa-refresh"></i>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-view>

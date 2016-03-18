@@ -1,0 +1,10 @@
+<ion-view view-title="Card">
+<ion-content class="padding">
+<h1>{{card.name}} {{card.lastname}}</h1>
+<div class="profilImg" ng-controller="CardsCtrl">
+	<img ng-src="{{card.image}}">
+</div>
+<p>{{card.age}} ans - {{card.sexe}}</p>
+<p>{{card.desc}}</p>
+</ion-content>
+</ion-view>

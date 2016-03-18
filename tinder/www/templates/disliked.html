@@ -1,0 +1,20 @@
+<ion-view view-title="Unliked">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="dislike in disliked">
+        <ion ng-repeat="card in cards">
+          <ion ng-show="{{dislike.user_id}} == {{card.id}}">
+
+            <a class="linkProfil" href="#/app/cards/{{card.id}}">{{card.name}} {{card.lastname}}</a>
+            <button class="btn-del button button-small button-assertive" ng-click="cardRemoveDislike({{dislike.id}})">
+              <i class="fa fa-trash"></i>
+            </button>
+          </ion>
+        </ion>
+      </ion-item>
+      <button class="button button-full button-positive" ng-click="refreshDislike()">
+        <i class="fa fa-refresh"></i>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-view>
